@@ -19,8 +19,8 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 /.vs
-/.vs
-/.vs
 *.json
 *.sqlite
 *.sqlite-journal
+/node_modules/.bin
+/node_modules
