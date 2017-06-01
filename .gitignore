@@ -24,3 +24,5 @@ bin-release/
 *.sqlite-journal
 /node_modules/.bin
 /node_modules
+/*
+/*.iml
