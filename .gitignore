@@ -2,6 +2,7 @@
 bin/
 bin-debug/
 bin-release/
+.vs/
 [Oo]bj/ # FlashDevelop obj
 [Bb]in/ # FlashDevelop bin
 
@@ -17,3 +18,9 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+/.vs
+/.vs
+/.vs
+*.json
+*.sqlite
+*.sqlite-journal
