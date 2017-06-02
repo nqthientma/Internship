@@ -12,6 +12,7 @@ var inject = require("gulp-inject");
 var clean = require('gulp-clean');
 var replace = require('gulp-replace');
 var gulpAngularExtender = require('gulp-angular-extender');
+var browserSync = require('browser-sync').create();
 
 //Convert all HTML tpl files to Angular template module
 gulp.task('create-templates', function() {
@@ -99,3 +100,10 @@ gulp.task('build', ['create-templates', 'inject-templates', 'usemin', 'add-depen
 
 //Default task which simply servers the source files
 gulp.task('default', ['connect-dev']);
+
+gulp.task('sync', function() {
+          browserSync.init({
+                           proxy: "my_project.dev",
+                           files: "*.css,*.php,css/*css"
+                           });
+          });
