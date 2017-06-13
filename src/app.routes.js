@@ -5,10 +5,10 @@ angular
     .config(config);
 
 function config ($routeProvider) {
-    $routeProvider.
-        when('/', {
-            templateUrl: 'sections/home/home.tpl.html',
-            controller: 'HomeController as home'
+    $routeProvider
+        .when('/', {
+            templateUrl: "../LoginPage/LoginPage.html",
+            controller : "logiNing"
         })
         .when('/premieres', {
             templateUrl: 'sections/premieres/premieres.tpl.html',
@@ -45,7 +45,11 @@ function config ($routeProvider) {
                 }
             }
         })
+        .when("/home",{
+            templateUrl: "../home.tpl.html.html",
+            controller : "HomeController as home"
+        })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: "../LoginPage.html"
         });
 }

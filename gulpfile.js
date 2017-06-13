@@ -107,3 +107,10 @@ gulp.task('sync', function() {
                            files: "*.css,*.php,css/*css"
                            });
           });
+
+gulp.task('sync', function() {
+          browserSync.init({
+                           proxy: "my_project.dev",
+                           files: "*.css,*.php,css/*css"
+                           });
+          });

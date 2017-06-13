@@ -26,3 +26,5 @@ bin-release/
 /node_modules
 /*
 /*.iml
+src/index.html
+src/assets/js/angular.min.js

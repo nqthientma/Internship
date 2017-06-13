@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" href="../LoginPage/LoginPage.css"></link>
+    <script src="../LoginPage/LoginPage.js"></script>
+</head>
+<body  ng-app="loginProcess" ng-view="">
+<div ng-controller="login" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form name="form" ng-submit="login(logindata)" role="form">
+                                    <h1>Login Page</h1>
+                                    <div ng-show="error" class="alert alert-danger">{{error}}</div>
+                                    <div class="form-group">
+                                        <p>UserName: <input type = "text" ng-model = "logindata.name" tabindex="1" class="form-control" placeholder="Username"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Password: <input type = "password" ng-model = "logindata.password" tabindex="2" class="form-control" placeholder="Password"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+
+                                                <input type="submit" name="login-submit" ng-disabled="form.$invalid || dataLoading" id="login-submit" tabindex="3" class="form-control btn btn-login" value="Log In">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
