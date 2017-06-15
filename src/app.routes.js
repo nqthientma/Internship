@@ -6,9 +6,9 @@ angular
 
 function config ($routeProvider) {
     $routeProvider
-        .when('/', {
-            templateUrl: "../LoginPage/LoginPage.html",
-            controller : "logiNing"
+        .when('/login', {
+            templateUrl: "sections/login/login.tpl.html",
+            controller: "LoginController as login"
         })
         .when('/premieres', {
             templateUrl: 'sections/premieres/premieres.tpl.html',
@@ -46,10 +46,10 @@ function config ($routeProvider) {
             }
         })
         .when("/home",{
-            templateUrl: "../home.tpl.html.html",
+            templateUrl: "sections/home/home.tpl.html",
             controller : "HomeController as home"
         })
         .otherwise({
-            redirectTo: "../LoginPage.html"
+            redirectTo: "/login"
         });
 }

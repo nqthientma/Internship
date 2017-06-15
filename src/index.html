@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
-    <link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></link>
+
     <!-- build:css assets/css/styles.css -->
     <link rel="stylesheet" href="assets/css/font-icons.css" type='text/css'>
     <link rel="stylesheet" href="assets/css/animations.css"/>
@@ -47,18 +47,20 @@
 </head>
 
 <body data-ng-app="app">
-
+    <div ng-controller="mainCtrl">
     <header id="site-header">
         <div class="container">
             <div class="pull-left logo">ANGULARJS <span class="alt">BY</span> EXAMPLE</div>
             <ul class="pull-right menu">
-                <li><a href="#/">HOME</a></li>
+                <li><a href="#/home">HOME</a></li>
                 <li><a href="#/premieres">PREMIERES</a></li>
                 <li><a href="#/popular">POPULAR</a></li>
                 <li><a href="#/search">SEARCH</a></li>
+                <li ng-show="!Auth.isLoggedin()"><a href="#/login">LOGIN</a></li>
             </ul>
         </div>
     </header>
+    </div>
 
     <section id="site-bar" data-ng-controller="BarController as bar">
         <div class="container">
@@ -102,7 +104,7 @@
         <script src="sections/view/view.ctrl.js"></script>
         <script src="components/bar/bar.ctrl.js"></script>
         <script src="sections/popular/popular.ctrl.js"></script>
-        <script src="LoginPage/LoginPage.js"></script>
+        <script src="sections/login/login.ctrl.js"></script>
     <!-- / -->
     <!-- SERVICES -->
         <script src="services/show.fct.js"></script>
